@@ -9,6 +9,10 @@ const app = express();
 app.use(cors());
 
 app.get('/', (req, res) => {
+  res.send('Hello world!')
+})
+
+app.get('/', (req, res) => {
   const { url } = req.query;
   axios(url)
     .then(response => {
